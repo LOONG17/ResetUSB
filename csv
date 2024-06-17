@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import pickle
-
+import requests
 # Function to extract features from an image
 def extract_features(image_path):
     # Load image
@@ -41,4 +41,4 @@ clf.fit(X, y)
 
 # Save the trained model
 with open('model.pkl', 'wb') as model_file:
-    pickle.dump(clf, model_file)
+    pickle.dump(clf, model_file) 
